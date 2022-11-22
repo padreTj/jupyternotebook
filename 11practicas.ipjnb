@@ -1,0 +1,611 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "f4276cf4",
+   "metadata": {},
+   "source": [
+    "\n",
+    "# Projects for junior Python developers\n",
+    "\n",
+    "## Projects:\n",
+    "    1.-Odd or even\n",
+    "    2.-Mad Libs Game\n",
+    "    3.-Word Count\n",
+    "    4.-Biography info\n",
+    "    5.-t's my acronym?\n",
+    "    6.-k, Paper, Scissors\n",
+    "    7.-ss the number\n",
+    "    8.-a palindrome\n",
+    "    9.-culate the tip\n",
+    "    10.-l slicer\n",
+    "    11.-cs generator"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "dbef366f",
+   "metadata": {},
+   "source": [
+    "## 1.-Odd or even"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "48f011e8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Ingrese un numero\n",
+      "45\n",
+      "El numero 45  es impar\n",
+      "1] Continuar\n",
+      "0] Salir.\n",
+      "1\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "sh: 1: cls: not found\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Ingrese un numero\n",
+      "10\n",
+      "EL numero  10  es par \n",
+      "1] Continuar\n",
+      "0] Salir.\n",
+      "0\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "sh: 1: cls: not found\n"
+     ]
+    }
+   ],
+   "source": [
+    "import os\n",
+    "\n",
+    "salir = 1\n",
+    "while (salir != 0):\n",
+    "    num = int(input(\"Ingrese un numero\\n\"))\n",
+    "    if(num % 2 == 0):\n",
+    "        print(\"EL numero \", str(num), \" es par \")\n",
+    "    else:\n",
+    "        print(\"El numero\",str(num), \" es impar\")\n",
+    "    salir = int(input(\"1] Continuar\\n0] Salir.\\n\"))\n",
+    "    os.system(\"cls\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8ea087d2",
+   "metadata": {},
+   "source": [
+    "##     2.-Mad Libs Game"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "7ce81b7c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Escribe un nombre: Luis\n",
+      "Menciona un lugar: parque\n",
+      "Escribe un verbo en participio: jugando warzone\n",
+      "Nombra un dia de la semana: Lunes\n",
+      "------------------------------------------\n",
+      "El dia  Lunes\n",
+      "Luis  estaba \n",
+      "jugando warzone  en un\n",
+      "parque FUE INCREIBLE🥵\n",
+      "------------------------------------------\n"
+     ]
+    }
+   ],
+   "source": [
+    "loop = 1\n",
+    "\n",
+    "#solo hare una repeticion en lugar de diez\n",
+    "while (loop < 2):\n",
+    "\n",
+    "    # All the questions that the program asks the user\n",
+    "    sujeto = input(\"Escribe un nombre: \")\n",
+    "    place = input(\"Menciona un lugar: \")\n",
+    "    verbo = input(\"Escribe un verbo en participio: \")\n",
+    "    dia = input(\"Nombra un dia de la semana: \")\n",
+    "\n",
+    "    # Displays the story based on the users input\n",
+    "    print (\"------------------------------------------\")\n",
+    "    print (\"El dia \",dia)\n",
+    "    print (sujeto, \" estaba \")\n",
+    "    print (verbo, \" en un\")\n",
+    "    print (place, \"FUE INCREIBLE🥵\")\n",
+    "    print (\"------------------------------------------\")\n",
+    "\n",
+    "    # Loop back to \"loop = 1\"\n",
+    "    loop = loop + 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1e5cdf88",
+   "metadata": {},
+   "source": [
+    "##   3.-Word Count"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "40bd7972",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Que estas pensando hoy?\n",
+      "Pienso que las computadoras del laboratorio son una basuuuura\n",
+      "Oh! no me importa lo que dijiste 🥵 pero fueron:  9  palabras\n"
+     ]
+    }
+   ],
+   "source": [
+    "text = input(\"Que estas pensando hoy?\\n\")\n",
+    "count = 0\n",
+    "words = text.split()\n",
+    "for word in words:\n",
+    "    count += 1\n",
+    "print(\"Oh! no me importa lo que dijiste 🥵 pero fueron: \", count, \" palabras\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "541f46d2",
+   "metadata": {},
+   "source": [
+    "##    4.-Biography info"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "346ec622",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Ingrese su nombreLuis Enrique\n",
+      "Ingrese su fecha de nacimiento dd/mm/aaaa21/03/1997\n",
+      "Ingrese su direccioncalle x y \n",
+      "Ingrese su meta de vidaTener estabilidad economica y amor\n",
+      "Nombre: Luis Enrique\n",
+      "Fecha de nacimiento: 21/03/1997\n",
+      "Direccion: calle x y \n",
+      "Meta de vida: Tener estabilidad economica y amor\n"
+     ]
+    }
+   ],
+   "source": [
+    "nombre = input(\"Ingrese su nombre\")\n",
+    "fecha_n = input(\"Ingrese su fecha de nacimiento dd/mm/aaaa\")\n",
+    "direccion = input(\"Ingrese su direccion\")\n",
+    "metas = input(\"Ingrese su meta de vida\")\n",
+    "\n",
+    "\n",
+    "\n",
+    "print(\"Nombre: \"+ nombre)\n",
+    "print(\"Fecha de nacimiento: \"+ fecha_n)\n",
+    "print(\"Direccion: \"+ direccion)\n",
+    "print(\"Meta de vida: \"+ metas)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1217c37b",
+   "metadata": {},
+   "source": [
+    "  ## 5.-t's my acronym?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "8ca4550a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Ingrese su frase a convertir\n",
+      "Universidad Autonoma Baja California\n",
+      "UABC\n"
+     ]
+    }
+   ],
+   "source": [
+    "frase = input(\"Ingrese su frase a convertir\\n\")\n",
+    "palabras = frase.split()\n",
+    "acron = \"\"\n",
+    "for i in palabras:\n",
+    "    acron += i[0].upper()\n",
+    "print(str(acron))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "efc45080",
+   "metadata": {},
+   "source": [
+    "## 6.-k, Paper, Scissors"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "8a7f0ff6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter a choice (rock, paper, scissors): rock\n",
+      "\n",
+      "You chose rock, computer chose scissors.\n",
+      "\n",
+      "Rock smashes scissors! You win!\n"
+     ]
+    }
+   ],
+   "source": [
+    "import random\n",
+    "\n",
+    "user_action = input(\"Enter a choice (rock, paper, scissors): \")\n",
+    "possible_actions = [\"rock\", \"paper\", \"scissors\"]\n",
+    "computer_action = random.choice(possible_actions)\n",
+    "print(f\"\\nYou chose {user_action}, computer chose {computer_action}.\\n\")\n",
+    "\n",
+    "if user_action == computer_action:\n",
+    "    print(f\"Both players selected {user_action}. It's a tie!\")\n",
+    "elif user_action == \"rock\":\n",
+    "    if computer_action == \"scissors\":\n",
+    "        print(\"Rock smashes scissors! You win!\")\n",
+    "    else:\n",
+    "        print(\"Paper covers rock! You lose.\")\n",
+    "elif user_action == \"paper\":\n",
+    "    if computer_action == \"rock\":\n",
+    "        print(\"Paper covers rock! You win!\")\n",
+    "    else:\n",
+    "        print(\"Scissors cuts paper! You lose.\")\n",
+    "elif user_action == \"scissors\":\n",
+    "    if computer_action == \"paper\":\n",
+    "        print(\"Scissors cuts paper! You win!\")\n",
+    "    else:\n",
+    "        print(\"Rock smashes scissors! You lose.\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4845e4bc",
+   "metadata": {},
+   "source": [
+    "## 7.-ss the number"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "99272444",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Adivina el numero entre el 1 y el 50\n",
+      "25\n",
+      "intente con un numero mas chico\n",
+      "Ingresa un numero entre el 1 y el 50:  15\n",
+      "intente con un numero mas chico\n",
+      "Ingresa un numero entre el 1 y el 50:  8\n",
+      "intente con un numero mas chico\n",
+      "Ingresa un numero entre el 1 y el 50:  5\n",
+      "DINGDINGDING! has acertado!!! y solo te tomo:  4  intentos\n"
+     ]
+    }
+   ],
+   "source": [
+    "import random\n",
+    "\n",
+    "rand = random.randrange(1,50)\n",
+    "count = 1\n",
+    "numero = int(input(\"Adivina el numero entre el 1 y el 50\\n\"))\n",
+    "\n",
+    "while numero != rand:\n",
+    "    if numero < rand:\n",
+    "        print(\"Intente con un numero mas grande\")\n",
+    "        numero = int(input(\"Adivina el numero entre el 1 y el 50  \"))\n",
+    "        count += 1\n",
+    "    else:\n",
+    "        print(\"intente con un numero mas chico\")\n",
+    "        numero = int(input(\"Ingresa un numero entre el 1 y el 50:  \"))\n",
+    "        count += 1\n",
+    "print(\"DINGDINGDING! has acertado!!! y solo te tomo: \", count, \" intentos\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b7429912",
+   "metadata": {},
+   "source": [
+    "## 8.-a palindrome"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "0bdfb934",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Palindrome checker\n",
+      "\n",
+      "Please enter a word, phrase, or a sentence \n",
+      "to check if it is a palindrome: anita lava la tina\n",
+      "The text you have entered is a palindrome!\n"
+     ]
+    }
+   ],
+   "source": [
+    "def convertInputString():\n",
+    "    rawInput = input(\"\\nPlease enter a word, phrase, or a sentence \\nto check if it is a palindrome: \") \n",
+    "    rawString = rawInput.lower() \n",
+    "    rawList = list(rawString) \n",
+    "    return rawList\n",
+    "\n",
+    "def stripAnalphabetics(dirtyList): \n",
+    "    analphabeticList = [\" \", \"-\", \".\", \",\", \":\", \";\", \"!\", \"?\", \"'\", \"\\\"\"] \n",
+    "    for character in analphabeticList: \n",
+    "        if character in dirtyList: \n",
+    "            dirtyList.remove(character) \n",
+    "            return stripAnalphabetics(dirtyList)\n",
+    "    return dirtyList \n",
+    "\n",
+    "def runPalindromeCheck(straightList):\n",
+    "    reversedList = straightList[::-1] \n",
+    "    if reversedList == straightList: \n",
+    "        return \"The text you have entered is a palindrome!\" \n",
+    "    else: \n",
+    "        return \"The text you have entered is not a palindrome.\" \n",
+    "\n",
+    "def main(): \n",
+    "    print(\"\\nPalindrome checker\") \n",
+    "    originalList = convertInputString()  \n",
+    "    originalList = stripAnalphabetics(originalList) \n",
+    "    palindromeCheck = runPalindromeCheck(originalList)\n",
+    "    print(palindromeCheck)\n",
+    "\n",
+    "main() "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "145a8b20",
+   "metadata": {},
+   "source": [
+    "## 9.-culate the tip"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "85dfe1ad",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Cuantas personas son: 4\n",
+      "total de la cuenta antes de propina: 1275\n",
+      "-------------------------------------------------\n",
+      "18% de propina es $229 El total seria: $1504\n",
+      "Cada persona pagaria:  376\n",
+      "-------------------------------------------------\n",
+      "20% de propina es $255 El total seria: $1530\n",
+      "Cada persona pagaria:  382\n",
+      "-------------------------------------------------\n",
+      "25% de propina es $318 El total seria: $1593\n",
+      "Cada persona pagaria:  398\n",
+      "-------------------------------------------------\n"
+     ]
+    }
+   ],
+   "source": [
+    "personas = int(input(\"Cuantas personas son: \"))\n",
+    "subtotal = int(input(\"total de la cuenta antes de propina: \"))\n",
+    "\n",
+    "print(\"-------------------------------------------------\")\n",
+    "print(\"18% de propina es ${} El total seria: ${}\".format(int(subtotal*0.18),int(subtotal*1.18)))\n",
+    "print(\"Cada persona pagaria: \",int((subtotal*1.18)/personas))\n",
+    "print(\"-------------------------------------------------\")\n",
+    "print(\"20% de propina es ${} El total seria: ${}\".format(int(subtotal*0.20),int(subtotal*1.20)))\n",
+    "print(\"Cada persona pagaria: \",int((subtotal*1.20)/personas))\n",
+    "print(\"-------------------------------------------------\")\n",
+    "print(\"25% de propina es ${} El total seria: ${}\".format(int(subtotal*0.25),int(subtotal*1.25)))\n",
+    "print(\"Cada persona pagaria: \",int((subtotal*1.25)/personas))\n",
+    "print(\"-------------------------------------------------\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "de4e781b",
+   "metadata": {},
+   "source": [
+    "## 10.-l slicer"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "1199a9a8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "What is your email address?: a1237375@uabc.edu.mx\n",
+      "Your username is 'a1237375' and your domain name is 'uabc.edu.mx'\n"
+     ]
+    }
+   ],
+   "source": [
+    "email = input(\"What is your email address?: \").strip()\n",
+    "user_name = email[:email.index(\"@\")]\n",
+    "domain_name = email[email.index(\"@\")+1:]\n",
+    "output = \"Your username is '{}' and your domain name is '{}'\".format(user_name,domain_name)\n",
+    "print(output)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f16295d7",
+   "metadata": {},
+   "source": [
+    "## 11.-cs generator"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "5dc8819c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Bienvenido, porfavor selecciona una cancion de este top\n",
+      "0] Salir\n",
+      "1] Without Me\n",
+      "2] Clint Eastwood\n",
+      "3] Tequila\n",
+      "4] Courtesy Call\n",
+      "1\n",
+      "You cut out a piece of me, and now I bleed internally Left here without you (no, no, no), without you (ooh) And it hurts for me  o think about what life could possibly be likeWithout you (no, no, no), without you (no, no)\n",
+      "\n",
+      "Bienvenido, porfavor selecciona una cancion de este top\n",
+      "0] Salir\n",
+      "1] Without Me\n",
+      "2] Clint Eastwood\n",
+      "3] Tequila\n",
+      "4] Courtesy Call\n",
+      "2\n",
+      "I ain't happy, I'm feeling glad I got sunshine in a bag I'm useless but not for long The future is coming on\n",
+      "\n",
+      "Bienvenido, porfavor selecciona una cancion de este top\n",
+      "0] Salir\n",
+      "1] Without Me\n",
+      "2] Clint Eastwood\n",
+      "3] Tequila\n",
+      "4] Courtesy Call\n",
+      "3\n",
+      "Tequila.... Tequila.... Tequila!...\n",
+      "\n",
+      "Bienvenido, porfavor selecciona una cancion de este top\n",
+      "0] Salir\n",
+      "1] Without Me\n",
+      "2] Clint Eastwood\n",
+      "3] Tequila\n",
+      "4] Courtesy Call\n",
+      "4\n",
+      "Hey-o, here comes the danger up in this club When we get started and we ain't gonna stop We gonna turn it out till it gets too hot Everybody sing, hey-O Tell'em turn it up till they can't no more Let's get this thing shakin' like a disco ball This is your last warning, a courtesy call Hey-o\n",
+      "\n",
+      "Bienvenido, porfavor selecciona una cancion de este top\n",
+      "0] Salir\n",
+      "1] Without Me\n",
+      "2] Clint Eastwood\n",
+      "3] Tequila\n",
+      "4] Courtesy Call\n",
+      "0\n",
+      "Saliendo...\n"
+     ]
+    }
+   ],
+   "source": [
+    "opc = 1\n",
+    "while opc != 0:\n",
+    "    opc = int(input(\"\\nBienvenido, porfavor selecciona una cancion de este top\\n0] Salir\\n1] Without Me\\n2] Clint Eastwood\\n3] Tequila\\n4] Courtesy Call\\n\"))\n",
+    "    if opc == 0:\n",
+    "        print(\"Saliendo...\")\n",
+    "    elif opc == 1:\n",
+    "        print(\"You cut out a piece of me, and now I bleed internally Left here without you (no, no, no), without you (ooh) And it hurts for me  o think about what life could possibly be likeWithout you (no, no, no), without you (no, no)\")\n",
+    "    elif opc == 2:\n",
+    "        print(\"I ain't happy, I'm feeling glad I got sunshine in a bag I'm useless but not for long The future is coming on\")\n",
+    "    elif opc == 3:\n",
+    "        print(\"Tequila.... Tequila.... Tequila!...\")\n",
+    "    elif opc == 4:\n",
+    "        print(\"Hey-o, here comes the danger up in this club When we get started and we ain't gonna stop We gonna turn it out till it gets too hot Everybody sing, hey-O Tell'em turn it up till they can't no more Let's get this thing shakin' like a disco ball This is your last warning, a courtesy call Hey-o\")\n",
+    "    else:\n",
+    "        print(\"Opcion no valida\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "4a3caf22",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
